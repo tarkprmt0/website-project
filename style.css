@@ -1,0 +1,1067 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, Helvetica, sans-serif;
+}
+body {
+    background-color: #6d92c4;
+    height: 100%;
+    
+    
+}
+ul, a{
+    list-style-type: none;
+    text-decoration: none;
+    color: white;
+}
+
+.main {
+    width: auto;
+    margin: 1rem;
+    border-radius: 3px;
+    height: auto;
+    background-image: linear-gradient(rgba(0,0,0,0.7),rgba(0,0,0,0.7)),url(image/arkaplan.jpg);
+    background-position: center;
+    background-size: cover;
+    box-shadow: 4px 4px 4px 4px #000;
+   -moz-box-shadow: 3px 3px 3px  #000;
+   -webkit-box-shadow: 3px 3px 3px  #000;
+}
+/* NAVBAR */
+.navbar{
+    
+    font-family: Arial, Helvetica, sans-serif;
+    display:flex;
+    justify-content: space-between;
+    align-items: center;
+    
+    height: 12%;
+    width: 100%;
+}
+.logo {
+    color: white;
+    padding: 1rem;
+}
+
+.menu {
+    padding: 1rem;
+    margin-left: auto;
+    border-radius: 5px;
+    width: auto;
+    
+}
+
+.menu > ul {
+    display: flex;
+    align-items: center;
+    height: 60px;
+    padding: 0 10px;
+    
+}
+
+.menu > ul > li {
+    position: relative;
+    height: 60px;
+    display: flex;
+    align-items: center;
+    
+}
+
+.menu > ul > li > a {
+    display: block;
+    height: 40px;
+    line-height: 40px;
+    font-size: 16px;
+    font-weight: 500;
+    padding: 0 15px;
+    color: white;
+    border-radius: 10px;
+}
+
+.menu > ul > li[data-dropdown] > a::after {
+    content: "\f0d7";
+    font-family: "Font Awesome 5 Free";
+    font-weight: 900;
+    margin-left: 5px;
+    color: #999;
+    transition: 300ms all;
+    display: inline-block;
+}
+
+.menu ul .dropdown {
+    position: absolute;
+    top: 60px;
+    left: 50%;
+    padding-top: 10px;
+    width: 200px;
+    margin-left: -100px;
+    text-align: center;
+    opacity: 0;
+    visibility: hidden;
+    transform: scale(0);
+    transition: 300ms all;
+}
+
+.menu ul .dropdown::before {
+    content: '';
+    border: 8px solid transparent;
+    border-bottom-color: #f5f5f5;
+    position: absolute;
+    top: -6px;
+    left: 50%;
+    margin-left: -12px;
+}
+
+.menu ul .dropdown ul {
+    background: #f5f5f5;
+    border-radius: 5px;
+    padding: 7px 0;
+}
+
+.menu ul .dropdown ul li a {
+    display: block;
+    font-size: 14px;
+    font-weight: 500;
+    line-height: 34px;
+    padding: 0 15px;
+    border-radius: 5px;
+    color: #555;
+}
+
+.menu ul .dropdown ul li {
+    position: relative;
+    padding: 0 7px;
+}
+
+.menu ul .dropdown ul li:hover > a {
+    background: #3174aa;
+    color: #000;
+}
+
+.menu > ul > li:hover > a::after {
+    transform: rotate(180deg);
+}
+
+.menu > ul > li:hover > a {
+    background: #3174aa;
+    
+}
+
+.menu > ul > li:hover > a + .dropdown {
+    opacity: 1;
+    visibility: visible;
+    transform: scale(1);
+}
+
+.menu ul .dropdown .dropdown {
+    left: 190px;
+    top: 0;
+    padding-left: 20px;
+    margin-left: 0;
+    padding-top: 0;
+}
+
+.menu ul .dropdown ul li:hover > .dropdown {
+    opacity: 1;
+    visibility: visible;
+    transform: scale(1);
+}
+
+.menu ul .dropdown .dropdown::before {
+    border-bottom-color: transparent;
+    border-right-color: #f5f5f5;
+    top: 10px;
+    left: 4px;
+    margin-left: 0;
+}
+
+.menu ul .dropdown li[data-dropdown] > a::after {
+    content: "\f0da";
+    font-family: "Font Awesome 5 Free";
+    font-weight: 900;
+    margin-left: 10px;
+    color: #999;
+    display: inline-block;
+    transition: 300ms all;
+}
+
+.menu ul .dropdown li[data-dropdown]:hover > a::after {
+    transform: rotate(-180deg);
+}
+
+.buton {
+    color: black;
+    border: 1px solid #3a9ee53f;
+    border-radius: 2px;
+    padding: 15px;
+    border-radius: 5px;
+    transition: 0.5s all;
+}
+.buton:hover {
+    background-color: #3a95de;
+    
+    
+}
+/* ANASAYFA İÇERİK */
+
+.orta-kisim{
+    display: flex;
+    height: 88%;
+    align-items: center;
+}
+
+.col{
+    display: inline-block;
+    flex-basis: 50%;
+    padding: 3rem;
+    color: white;
+}
+.col h1 {
+    font-size: 70px;
+}
+
+
+
+
+
+.card {
+    width: 16rem;
+    height: 18rem;
+    display: inline-block;
+    justify-content: center;
+    border-radius: 10px;
+    padding: 1rem 1.7rem;
+    box-sizing: border-box;
+    cursor: pointer;
+    margin: 1rem 1rem;
+    background-size: cover;
+    background-position: center;
+    transition: transform 0.5s;
+    text-align: center;
+    
+    
+}
+.card h5 {
+    color: #010221;
+    font-size: 16px;
+}
+.card p {
+    margin-top:50%;
+    
+}
+
+.card1 {
+    background-image: url(image/istockphoto-924836924-612x612.jpg);
+    
+}
+
+.card2 {
+    
+    background-image: url(image/seyahat.jpg);
+}
+.card3 {
+    
+    background-image: url(image/kapadokya.jpg);
+}
+.card4 {
+    
+    background-image: url(image/aaaaa.jpg);
+}
+.card5 {
+    background-image: url(image/kamilkoç.jpeg);
+}
+.card6 {
+    background-image: url(image/otel.jpg);
+}
+.card7 {
+    background-image: url(image/pegasus.jpg);
+}
+
+.card:hover  {
+    transform: translateY(-10px);
+}
+
+.orta-alt {
+    text-align: center;
+    padding: 5rem;
+}
+
+.orta-alt h1 {
+    color: white;
+    
+}
+.alt-col {
+    margin-top: 5rem;
+    display: flex;
+    padding: 0% 25%;
+    color:white;
+}
+
+/* GİRİŞ/KAYIT OL */
+.giris {
+    display: flex;
+    background-image:linear-gradient(rgba(0,0,0,0.7),rgba(0,0,0,0.7)),url(image/arkaplan.jpg);
+    background-size: cover;
+    background-repeat: none;
+
+}
+
+  .giriskutu , .kayitkutu{
+    width: 25%;
+    margin: 12% 12%;
+    padding: 70px 30px 44px;
+    border-radius: 22px;
+    background: #010221d5;
+    text-align: center;
+    color: white;
+    
+
+    }
+    
+   
+    .avatar{
+    margin: 0 auto 16px;
+    border-radius: 50%;
+    background:
+    linear-gradient(-45deg, #157ae1, #c7a1ff);
+    
+    padding: 2px;
+    width: 120px;
+    height: 120px;
+    }
+    
+    .avatar>img{
+    width: 100%;
+    height:100% ;
+    object-fit: cover;
+    border-radius: 50%;
+    border:4px solid #161616;
+    }
+    
+    .giriskutu,> h2, .kayitkutu h2{
+    font-size: 36px;
+    font-weight: 500;
+    margin: 0 0 4px;
+    }
+    
+    .giriskutu>h3, .kayitkutu h3{
+    color:rgba(255,255,255,0.38);
+    margin:20px 0 30px;
+    font-weight: 500;
+    font-size: 16px;
+    }
+    
+    .login-form, .register-form {
+    
+    display: grid;
+    gap:16px;
+    place-items:center;
+    width: 100%;
+    margin: 0;
+    }
+    
+    .textbox{
+    width: 100%;
+    position: relative;
+    }
+    
+    
+    .textbox span{
+    position: absolute;
+    top:50%;
+    left: 16px;
+    translate: 0 -50%;
+    color: rgba(255, 255, 255, 0.38);
+    }
+    
+    .login-form input, .register-form input,
+    .login-form button, .register-form button {
+    width: 100%;
+    height: 60px;
+    outline: none;
+    padding: 0;
+    font-family: inherit;
+    font-size: 16px;
+    border-radius: 8px;
+    }
+    
+    .login-form input, .register-form input{
+    background: transparent;
+    border: 2px solid rgba(255,255,255,0.1);
+    font-size: 18px;
+    padding: 0px 30px 30px 30px;
+    color:inherit;
+    }
+    .login-form input:focus, .register-form input:focus{
+    border-color:#157ae1;
+    }
+    
+    .login-form button, .register-form button{
+    cursor: pointer;
+    background: #157ae1;
+    color:#f9f9f9;
+    font-weight: 600vw;
+    letter-spacing: 2px;
+    }
+    
+    .login-form a, .register-form a{
+    
+    color: #157ae1;
+    font-size: 16px;
+    text-align: left;
+    text-decoration: none;
+    }
+
+
+/* HİZMETLER SEKMESİ İÇERİK */
+.hizmet-ana{
+    height: auto;
+}
+.hizmet-aciklama {
+    padding: 5rem;
+    
+}
+.hizmet-aciklama img {
+    height: 18rem;
+    width: 35rem;
+    border-radius: 10px;
+    
+}
+
+.h-aciklama {
+    display: flex;
+    align-items: center;
+    margin: 10% 10%;
+    
+}
+.h-aciklama {
+    overflow: hidden;
+    width: 100%;
+}
+.h-aciklama h3 {
+    width: 50%;
+    font-size: 40px;
+    color: white;
+}
+.h-aciklama p {
+    width: 50%;
+    font-size: 15px;
+    color: white;
+}
+
+.hizmetkart:hover{
+    transform: translateY(-10px);
+}
+
+.aciklamasol {
+    width: 50%;
+    float: left;
+        
+}
+
+.aciklamasag{
+    width: 50%;
+     float: right;
+        
+}
+
+.hizmetkolon {
+    text-align: center;
+    margin-top: 8rem;
+}
+.hizmetkart {
+width: 33%;
+height: 22rem;
+display: inline-block;
+justify-content: center;
+border-radius: 10px;
+padding: 15px 25px;
+box-sizing: border-box;
+cursor: pointer;
+margin: 10px 15px;
+background-size: cover;
+background-position: center;
+transition: transform 0.5s;
+text-align: center;
+}
+/*  */
+/* HAKKINDA SEKMESİ */
+
+.hak-icerik {
+    text-align: center;
+    color: white;
+    font-size: 20px;
+    padding: 10rem;
+}
+
+.hak-icerik  p{
+    
+    width: 100%;
+    margin: 5% auto;
+    
+}
+
+/*  */
+
+/* YURTİÇİ TURLAR SEKMESİ */
+.turicerik {
+display:grid;
+text-align: center;
+color: white;
+}
+
+.yurtkartlar {
+    margin: 3% 27%;
+    display: block;
+    
+}
+
+.yurtkart {
+    width: 28%;
+    height: 18rem;
+    display: inline-block;
+    justify-content: center;
+    border-radius: 10px;
+    padding: 15px 25px;
+    box-sizing: border-box;
+    cursor: pointer;
+    margin: 10px 15px;
+    background-size: cover;
+    background-position: center;
+    transition: transform 0.5s;
+    text-align: center;
+}
+.yurtkart p {
+    font-size: 20px;
+}
+.yurtkart:hover {
+
+        transform: translateY(-10px);
+
+}
+
+/*  */
+
+/* YURT İÇİ */
+.ykart1 {
+    background-image: url(image/kapadokya.jpg);
+}
+.ykart2 {
+    background-image: url(image/karadeniz.jpg);
+}
+.ykart3 {
+    background-image: url(image/doğu-ekspresi.jpg);
+}
+.ykart7 {
+    background-image: url(image/antalya.jpg);
+}
+.ykart8 {
+    background-image: url(image/mardin.jpg);
+}
+.ykart9 {
+    background-image: url(image/çanakkale.jpg);
+}
+/* YURT DIŞI */
+.ykart4 {
+    background-image: url(image/eyfel.jpg);
+}
+.ykart5 {
+    background-image: url(image/mısır.jpg);
+}
+.ykart6 {
+    background-image: url(image/almanya.jpg);
+}
+
+.ykart10 {
+    background-image: url(image/amerika.jpg);
+}
+.ykart11 {
+    background-image: url(image/çin.jpg);
+}
+.ykart12 {
+    background-image: url(image/rusya.jpg);
+}
+
+/*  */
+.turarkaplan {
+    width: 100%;
+    padding: 10rem 0rem;
+    background-color: rgba(0, 0, 0, 0.199);
+    background-image: url(image/dag.png);
+    background-repeat:no-repeat;
+    background-size: cover;
+    background-position: center;
+    border-top: solid  1px white;
+    border-bottom: solid 1px white;
+    color: white;
+    
+}
+
+.turarkaplan h1 {
+    margin-left: 32rem;
+    width: 50%;
+    font-size: 75px;
+    border-bottom: dashed 1px rgba(255, 255, 255, 0.452);
+    text-align: center;
+}
+
+.turarkaplan p {
+    
+    font-size: 25px;
+}
+/*  */
+
+/* Şehir detay SAYFASİ */
+.sehir-orta {
+height: 50rem;
+    
+}
+.sehirkart {
+    margin-top: 10rem;
+    align-items: center;
+}
+.sehirkartimg {
+    padding: 1rem;
+    width: 50%;
+    text-align: center;
+    display: block;
+    float: left;
+    
+    
+}
+.sehirimg {
+    width: 100%;
+    height: 35rem;
+    border-radius: 10px;
+    
+}
+
+
+.sehirbuton button{
+    margin-top: 1rem;
+    padding: 1rem;
+    background-color: transparent;
+    border: none;
+    color: white;
+   
+}
+
+.sehiraciklama {
+    
+    margin: 5rem 2rem;
+    height: auto;
+    text-align: center;
+    width: 45%;
+    float: right;
+    color: white;
+}
+
+.rezervasyon {
+    margin-top:20rem;
+    padding: 2rem;
+    background-color: transparent;
+    border: 1px solid #3174aa;
+    border-radius: 5px;
+    color: white;
+}
+
+.rezervasyon:hover {
+    transition: 0.5s all;
+    background-color: #3174aa;
+    border: 1px solid white;
+}
+.yorumkutu {
+    padding: 3rem 0rem;
+    width: 97%;
+    background-color: transparent;
+    margin: 2rem;
+    color: white;
+    border: 1px solid white;
+    border-radius: 5px;
+}
+
+
+/*  */
+/* FOOTER */
+footer {
+    height: auto;
+    background-color: #3174aa;
+    display: flex;
+    justify-content: space-between;
+}
+.f-cols1{
+    
+    display: flex;
+}
+.f-col {
+    margin: 2rem;
+}
+.f-col h3{
+    color: white;
+    font-size: 19px;
+    border-bottom: dashed 1px rgb(255, 255, 255);
+    border-width: ;
+}
+.f-col  p {
+    margin-top: 10px;
+    font-size: 12px;
+    
+}
+.f-cols2 {
+    margin-top: 1.5rem;
+    margin-right: 10%;
+    display: inline-block;
+    border-bottom: 1px dashed white;
+    height: 50px;
+}
+.f-cols2 i{
+    color: white;
+    font-size: 25px;
+    margin: 1rem;
+}
+
+.fi-yazi {
+    text-align: center;
+    color: white;
+    font-size: 13px;
+}
+
+
+.section-padding {
+	padding: 100px 0px;
+}
+
+@media  (max-width:768px) {
+    /* MENU RESPONSİVE */
+    .navbar {
+        display: block;
+        text-align: center;
+    }
+    .logo {
+        font-size: 12px;
+    }
+    .main{
+        width: auto;
+    }
+    .menu {
+        width: auto;
+        margin: auto;
+    }
+    .menu ul {
+        margin: auto;
+        width: 100%;
+
+
+
+    }
+    .menu ul li {
+        margin: auto;
+
+    }
+    .menu ul li a {
+        
+        font-size: 15px;
+        padding: 0 5px;  
+    }
+    
+    /* ANASAYFA RESPONSİVE */
+    
+    .col {
+        text-align: center;
+    }
+    .col h1{
+        font-size: 25px;
+    }
+    
+    .orta-kisim {
+        display: block;
+        width: 100%;
+    }
+    .alt-col {
+        display: block;
+        padding: 1%;
+    }
+
+    .card {
+        width: 100%;
+        margin: 10% 0%;
+    }
+    /*  */
+
+    /* footer */
+
+    footer{
+        display: block;
+        text-align: center;
+    }
+    .f-cols1 h3, .f-cols1 p {
+        font-size: 15px;
+    }
+    .f-cols2{
+        margin: auto;
+    }
+    
+   
+    /*  */
+    /* HAKKINDA RESPONSİVE */
+    .hak-icerik {
+        text-align: center;
+        color: white;
+        font-size: 20px;
+        padding: 3rem;
+    }
+    
+    .hak-icerik  p{
+        
+        width: 100%;
+        margin: 5% auto;
+        
+    }
+    /*  */
+    /* HİZMETLER RESPONSİVE */
+    .h-aciklama {
+        display: block;
+        margin: 0%;
+    }
+    .aciklamasol img, .aciklamasag img {
+        float: none;
+        display: block;
+        width: 100%;
+        text-align: center;
+        
+    }
+    .aciklamasag, .aciklamasol {
+        display: block;
+        float:none;
+        width: 100%;
+        text-align: center;
+        margin-bottom: 15%;
+        
+        
+    }
+    .h-aciklama h3, .h-aciklama p{
+        width: 100%;
+        
+    }
+
+    .hizmetkart {
+        width: 100%;
+        margin: 10% 0%;
+    }
+
+    /* YURT SAYFA RESPONSİVE */
+    .turarkaplan {
+        width:100%;
+    }
+    .turarkaplan h1 {
+        font-size: 35px;
+        width: 100%;
+        margin-left: 0px;
+    }
+
+    .yurtkart {
+        width: 100%;
+        margin: 10% 0%;
+    }
+    /*  */
+    /* SATİN ALİM SAYFASI RESPONSİVE */
+    .sehirkartimg {
+        width: 100%;
+    }
+    .sehiraciklama {
+        width: 100%;
+        margin: 0;
+    }
+
+    .yorumkutu {
+        width: 85%;
+    }
+
+/* GİRİŞ RESPONSİVE */
+.giris {
+    display: block;
+}
+.giriskutu, .kayitkutu{
+    width: 90%;
+    margin: 5%;
+}
+/*  */
+
+/*  */
+    
+}
+
+@media only screen and (min-width: 768px) and (max-width: 1400px) {
+    
+
+    /* MENU RESPONSİVE */
+    .navbar {
+        display: block;
+        text-align: center;
+    }
+    .logo {
+        font-size: 18px;
+    }
+    .main{
+        width: auto;
+    }
+    .menu {
+        width: auto;
+        margin: auto;
+    }
+    .menu ul {
+        margin: auto;
+        width: 100%;
+
+
+
+    }
+    .menu ul li {
+        margin: auto;
+
+    }
+    .menu ul li a {
+        
+        font-size: 15px;
+        padding: 0 5px;  
+    }
+    
+    /* ANASAYFA RESPONSİVE */
+    
+    .col {
+        text-align: center;
+        width: 100%;
+        
+    }
+    .col h1{
+        font-size: 35px;
+    }
+    
+    .orta-kisim {
+        display: block;
+    }
+    .orta-alt {
+       
+        padding: 0%;
+    }
+    .alt-col {
+        
+        width: 100%;
+        margin: 0%;
+        padding: 2%;
+    }
+
+    .card5, .card6, .card7 {
+        width: 85%;
+    }
+    /*  */
+
+    /* footer */
+
+    footer{
+        display: block;
+        text-align: center;
+    }
+    .f-cols1 {
+        text-align: center;
+        width: 100%;
+        
+    }
+    .f-cols1 h3, .f-cols1 p {
+        font-size: 18px;
+        
+    }
+    .f-col1, .f-col2, .f-col3 {
+        margin: 5% auto;
+    }
+    .f-cols2{
+        margin: auto;
+    }
+    
+   
+    /*  */
+
+    /* HAKKINDA RESPONSİVE */
+    .hak-icerik {
+        text-align: center;
+        color: white;
+        font-size: 20px;
+        padding: 3rem;
+    }
+    
+    .hak-icerik  p{
+        
+        width: 100%;
+        margin: 5% auto;
+        
+    }
+    /*  */
+    
+    /* HİZMETLER RESPONSİVE */
+    .h-aciklama {
+        margin: auto;
+    }
+    .aciklamasol img, .aciklamasag img {
+        width: 100%;
+        
+    }
+    .aciklamasag, .aciklamasol {
+        width: 100%;
+        padding: 1%;
+    }
+    .h-aciklama h3, .h-aciklama p{
+        width: 100%;
+        
+    }
+    
+    .hizmetkart {
+        width: 44%;
+        
+    }
+
+    /*  */
+
+    /* GİRİŞ RESPONSİVE */
+.giris {
+    display: block;
+}
+.giriskutu, .kayitkutu{
+    width: 90%;
+    margin: 5%;
+}
+/*  */
+
+    /* YURT SAYFA RESPONSİVE */
+    
+    .turarkaplan h1 {
+       font-size: 40px;
+       margin: auto;
+    }
+    .yurtkartlar {
+
+        width: 100%;
+        margin: 10% auto;
+    }
+
+    .yurtkart {
+        width: 40%;
+    }
+    /*  */
+    /* SATİN ALİM SAYFASI RESPONSİVE */
+    .sehirkartimg {
+        
+    }
+    .sehiraciklama {
+        
+    }
+
+    .yorumkutu {
+        
+    }
+
+
+
+}
+
+ 
